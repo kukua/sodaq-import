@@ -1,0 +1,4 @@
+import:
+    build: .
+    env_file:
+        - .env
