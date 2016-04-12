@@ -11,11 +11,11 @@ var enabledColumn = env('IMPORT_ENABLED_COLUMN')
 var timestampColumn = env('IMPORT_TIMESTAMP_COLUMN')
 
 var endTimestamp = (process.argv[2] || Math.round(Date.now() / 1000))
-//var range = endTimestamp
-var range = 4 * 60 * 60 // seconds
+//var range = endTimestamp // all
+var range = (process.argv[3] || 4 * 60 * 60) // seconds
 var startTimestamp = endTimestamp - range
 //var timeout = 10 * 60 * 1000 // milliseconds
-var timeout = 30 * 1000 // milliseconds
+var timeout = 60 * 1000 // milliseconds
 
 // Data processing
 var tableNameToDeviceId = (table) => {
