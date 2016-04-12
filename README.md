@@ -12,4 +12,5 @@ chmod 600 .env
 # > Edit .env
 
 sudo cp ./cronjob /etc/cron.d/sodaq-import
+sudo service cron reload
 ```

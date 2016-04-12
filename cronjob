@@ -1,1 +1,1 @@
-3 * * * * ubuntu cd /home/ubuntu/data/sodaq-import && docker-compose up import
+3 * * * * ubuntu cd /home/ubuntu/data/sodaq-import && /usr/local/bin/docker-compose up import
