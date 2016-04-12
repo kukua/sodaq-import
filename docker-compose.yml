@@ -2,3 +2,5 @@ import:
     build: .
     env_file:
         - .env
+    external_links:
+        - concavasetupmysqlmqtt_mariadb_1:mariadb
