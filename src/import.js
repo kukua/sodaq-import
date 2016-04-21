@@ -29,15 +29,17 @@ var getColumns = (results) => _.map(Object.keys(results[0]), (key) => {
 	key = key.replace(/[^a-zA-Z0-9\_]+/g, '').toLowerCase()
 	if (key === 'ts') return 'timestamp'
 	if (key === 'hum') return 'humid'
-	if (key === 'gaspres') return 'gaspress'
+	if (key === 'gaspres') return 'gasPress'
+	if (key === 'rainticks') return 'rain'
+	if (key === 'rainticks1') return 'rain'
+	if (key === 'windticks') return 'windSpeed'
+	if (key === 'windgustticks') return 'gustSpeed'
+	if (key === 'windgustdir') return 'gustDir'
 	return key
 })
 var getRows = (results) => _.map(results, (result) => {
 	if (typeof result.RainTicks !== 'undefined') {
 		result.RainTicks = Math.round(10 * result.RainTicks * 0.2) / 10
-	}
-	if (typeof result.RainTicks1 !== 'undefined') {
-		result.RainTicks1 = Math.round(10 * result.RainTicks1 * 0.2) / 10
 	}
 	if (typeof result.RainTicks2 !== 'undefined') {
 		result.RainTicks2 = Math.round(10 * result.RainTicks2 * 0.2) / 10
