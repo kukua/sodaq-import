@@ -29,12 +29,16 @@ var getColumns = (results) => _.map(Object.keys(results[0]), (key) => {
 	key = key.replace(/[^a-zA-Z0-9\_]+/g, '').toLowerCase()
 	if (key === 'ts') return 'timestamp'
 	if (key === 'hum') return 'humid'
+	if (key === 'humSHT21') return 'humid'
 	if (key === 'gaspres') return 'gasPress'
 	if (key === 'rainticks') return 'rain'
 	if (key === 'rainticks1') return 'rain'
 	if (key === 'windticks') return 'windSpeed'
 	if (key === 'windgustticks') return 'gustSpeed'
 	if (key === 'windgustdir') return 'gustDir'
+	if (key === 'tempbmp085') return 'temp'
+	if (key === 'presbmp085') return 'pressure'
+	if (key === 'presbmp') return 'pressure'
 	return key
 })
 var getRows = (results) => _.map(results, (result) => {
