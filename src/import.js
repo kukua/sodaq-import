@@ -45,6 +45,9 @@ var getRows = (results) => _.map(results, (result) => {
 	if (typeof result.RainTicks !== 'undefined') {
 		result.RainTicks = Math.round(10 * result.RainTicks * 0.2) / 10
 	}
+	if (typeof result.RainTicks1 !== 'undefined') {
+		result.RainTicks1 = Math.round(10 * result.RainTicks1 * 0.2) / 10
+	}
 	if (typeof result.RainTicks2 !== 'undefined') {
 		result.RainTicks2 = Math.round(10 * result.RainTicks2 * 0.2) / 10
 	}
