@@ -7,7 +7,7 @@
 ```bash
 git clone https://github.com/kukua/sodaq-import.git
 cd sodaq-import
-cp .env.sample .env
+cp .env.example .env
 chmod 600 .env
 # > Edit .env
 
