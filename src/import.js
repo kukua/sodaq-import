@@ -39,6 +39,7 @@ var getColumns = (results) => _.map(Object.keys(results[0]), (key) => {
 	if (key === 'tempbmp085') return 'temp'
 	if (key === 'presbmp085') return 'pressure'
 	if (key === 'presbmp') return 'pressure'
+	if (key === 'batvolt') return 'battery'
 	return key
 })
 var getRows = (results) => _.map(results, (result) => {
